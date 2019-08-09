@@ -28,8 +28,7 @@
       var url = "https://gist.githubusercontent.com/fernandopso/e99c2358922aa01918e687c796ba2452/raw/ddbd6311deaeb354e78b98e35273360b931df118/urls"
       function getData() {
         $.get( url, function( data ) {
-          $( ".result" ).html( data );
-          alert( data );
+          $( ".result" ).html( data.split("http") );
         });
       }
       window.onload = getData;
