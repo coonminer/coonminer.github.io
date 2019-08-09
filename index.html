@@ -23,13 +23,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
     <!-- Get Data -->
-    <script>
+    <script type="text/javascript">
       var url = "https://gist.githubusercontent.com/fernandopso/e99c2358922aa01918e687c796ba2452/raw/ddbd6311deaeb354e78b98e35273360b931df118/urls"
-      
-      $.get(url, function(data, status){
-          alert("Data: " + data.text() + "\nStatus: " + status);
-      });
-    </script>
+      function codeAddress() {
+          alert(url);
+      }
+      window.onload = codeAddress;
+    </script> 
     
      <!-- Twitter Widgets -->
      <script>
