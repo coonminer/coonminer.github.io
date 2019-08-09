@@ -10,6 +10,7 @@
   </head>
   <body>  
     <center>
+      <row class"result"></row>
       <row>
         <blockquote class="twitter-tweet">
           <a href="https://twitter.com/consequence/status/1159630439100932096"></a>
@@ -26,8 +27,9 @@
     <script type="text/javascript">
       var url = "https://gist.githubusercontent.com/fernandopso/e99c2358922aa01918e687c796ba2452/raw/ddbd6311deaeb354e78b98e35273360b931df118/urls"
       function getData() {
-        $.get(url, function(data, status){
-          alert("Data: " + data + "\nStatus: " + status);
+        $.get( url, function( data ) {
+          $( ".result" ).html( data );
+          alert( "Load was performed." );
         });
       }
       window.onload = getData;
