@@ -23,7 +23,7 @@
       var url = "https://gist.githubusercontent.com/fernandopso/e99c2358922aa01918e687c796ba2452/raw/ddbd6311deaeb354e78b98e35273360b931df118/urls"
       function getData() {
         $.get( url, function( data ) {
-          var tweets =  data.split(" ")
+          var tweets =  data.split("\n")
           
           $.each( tweets, function( index, value ) {
              $('.result').append("<blockquote class='twitter-tweet'><a href='https://twitter.com/consequence/status/1159630439100932096'></a></blockquote>");
