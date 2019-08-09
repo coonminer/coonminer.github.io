@@ -25,8 +25,8 @@
         $.get( url, function( data ) {
           var tweets =  data.split("\n")
           
-          $.each( tweets, function( index, value ) {
-             $('.result').append("<blockquote class='twitter-tweet'><a href='https://twitter.com/consequence/status/1159630439100932096'></a></blockquote>");
+          $.each( tweets, function( index, tweet ) {
+             $('.result').append("<blockquote class='twitter-tweet'><a href='" + tweet +"'></a></blockquote>");
           });
         });
       }
