@@ -10,12 +10,7 @@
   </head>
   <body>  
     <center>
-      <div class="result"></div>
-      <row>
-        <blockquote class="twitter-tweet">
-          <a href="https://twitter.com/consequence/status/1159630439100932096"></a>
-        </blockquote>
-      </row>
+      <row class="result"></row>
     </center>
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -28,7 +23,11 @@
       var url = "https://gist.githubusercontent.com/fernandopso/e99c2358922aa01918e687c796ba2452/raw/ddbd6311deaeb354e78b98e35273360b931df118/urls"
       function getData() {
         $.get( url, function( data ) {
-          $( ".result" ).html( data.split("http") );
+          var tweets =  data.split(" ")
+          
+          $.each( tweets, function( index, value ) {
+             $('.result').append("<blockquote class='twitter-tweet'><a href='https://twitter.com/consequence/status/1159630439100932096'></a></blockquote>");
+          });
         });
       }
       window.onload = getData;
